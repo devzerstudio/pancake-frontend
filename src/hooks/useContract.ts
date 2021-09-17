@@ -86,8 +86,8 @@ export const usePancakeRabbits = () => {
 }
 
 export const useProfile = () => {
-  const { account, library } = useActiveWeb3React()
-  return useMemo(() => getProfileContract(account ? library.getSigner() : library), [library, account])
+  const { library } = useActiveWeb3React()
+  return useMemo(() => getProfileContract(library.getSigner()), [library])
 }
 
 export const useLotteryV2Contract = () => {
@@ -171,13 +171,13 @@ export const useAnniversaryAchievementContract = () => {
 }
 
 export const useNftSaleContract = () => {
-  const { account, library } = useActiveWeb3React()
-  return useMemo(() => getNftSaleContract(account ? library.getSigner() : library), [library, account])
+  const { library } = useActiveWeb3React()
+  return useMemo(() => getNftSaleContract(library.getSigner()), [library])
 }
 
 export const usePancakeSquadContract = () => {
-  const { account, library } = useActiveWeb3React()
-  return useMemo(() => getPancakeSquadContract(account ? library.getSigner() : library), [library, account])
+  const { library } = useActiveWeb3React()
+  return useMemo(() => getPancakeSquadContract(library.getSigner()), [library])
 }
 
 export const useFarmAuctionContract = () => {
