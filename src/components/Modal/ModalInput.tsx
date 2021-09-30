@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Text, Button, Input, InputProps, Flex, Link } from '@pancakeswap/uikit'
 import { useTranslation } from 'contexts/Localization'
@@ -10,7 +11,7 @@ interface ModalInputProps {
   symbol: string
   onSelectMax?: () => void
   onChange: (e: React.FormEvent<HTMLInputElement>) => void
-  placeholder?: string
+  // placeholder?: string
   value: string
   addLiquidityUrl?: string
   inputTitle?: string

@@ -31,6 +31,7 @@ const ConfirmProfileCreationModal: React.FC<Props> = ({
   minimumCakeRequired,
   allowance,
   onDismiss,
+  userName,
 }) => {
   const { t } = useTranslation()
   const profileContract = useProfile()

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { ChevronDownIcon, ChevronUpIcon, Text } from '@pancakeswap/uikit'
 import { useTranslation } from 'contexts/Localization'
@@ -30,6 +31,10 @@ const ExpandableSectionButton: React.FC<ExpandableSectionButtonProps> = ({ onCli
       {expanded ? <ChevronUpIcon /> : <ChevronDownIcon />}
     </Wrapper>
   )
+}
+
+ExpandableSectionButton.propTypes = {
+  expanded: PropTypes.bool,
 }
 
 ExpandableSectionButton.defaultProps = {

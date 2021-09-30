@@ -126,10 +126,7 @@ const CollectRoundWinningsModal: React.FC<CollectRoundWinningsModalProps> = ({ o
       )
     } catch (error) {
       console.error('Unable to claim winnings', error)
-      toastError(
-        t('Error'),
-        error?.data?.message || t('Please try again. Confirm the transaction and make sure you are paying enough gas!'),
-      )
+      toastError(t('Error'), t('Please try again. Confirm the transaction and make sure you are paying enough gas!'))
     } finally {
       setIsPendingTx(false)
     }
